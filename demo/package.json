@@ -11,9 +11,8 @@
   },
   "dependencies": {
     "react": "17.0.1",
-    "react-native": "0.64.2",
-    "react-native-general-actionsheet": "^1.0.4",
-    "react-native-open-map-navigation": "1.0.4"
+    "react-native-system-file-browser": "../lib",
+    "react-native": "0.64.2"
   },
   "devDependencies": {
     "@babel/core": "^7.14.8",

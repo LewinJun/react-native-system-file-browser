@@ -6,7 +6,7 @@
  * @flow strict-local
  */
 
-import React from 'react';
+import React, { useState } from 'react';
 import type { Node } from 'react';
 import {
   SafeAreaView,
@@ -18,11 +18,12 @@ import {
   ActionSheetIOS,
   TouchableOpacity,
   View,
+  Image,
 } from 'react-native';
 
-// import OpenMapNavigation from './native'
+import RNSystemFileBrower from './native'
 
-import OpenMapNavigation from 'react-native-open-map-navigation'
+// import OpenMapNavigation from 'react-native-open-map-navigation'
 
 
 import {
@@ -66,6 +67,8 @@ const App: () => Node = () => {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
   };
 
+  const [img, setImg] = useState('')
+
   return (
     <SafeAreaView style={backgroundStyle}>
       <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
@@ -77,20 +80,25 @@ const App: () => Node = () => {
             backgroundColor: isDarkMode ? Colors.black : Colors.white,
           }}>
           <TouchableOpacity style={styles.btn} onPress={() => {
-            OpenMapNavigation.openMapActionSheet("121.467237", "31.234532", "上海华盛大公馆", {
-              onFail: (e) => {
-                console.log(e)
-              },
-              onNoMapApp: () => {
-                console.log("没有相关地图")
-              },
-              onSelectItem: (item) => {
-                console.log("选择了：%o", item)
-              }
+            RNSystemFileBrower.openFileBrower().then(res => {
+              console.log(res)
+              setImg(res?.urls[0])
             })
+            // OpenMapNavigation.openMapActionSheet("121.467237", "31.234532", "上海华盛大公馆", {
+            //   onFail: (e) => {
+            //     console.log(e)
+            //   },
+            //   onNoMapApp: () => {
+            //     console.log("没有相关地图")
+            //   },
+            //   onSelectItem: (item) => {
+            //     console.log("选择了：%o", item)
+            //   }
+            // })
           }}>
-            <Text style={{ color: 'white' }}>打开自带地图</Text>
+            <Text style={{ color: 'white' }}>打开自带文件浏览器</Text>
           </TouchableOpacity>
+          <Image source={{ uri: img }} style={{ width: '100%', height: 300 }} />
         </View>
       </ScrollView>
     </SafeAreaView>
