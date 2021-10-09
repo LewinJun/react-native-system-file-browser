@@ -7,19 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		18BA3BD926C11C9E001E5047 /* RNSystemFileBrower.h in Headers */ = {isa = PBXBuildFile; fileRef = 18BA3BD726C11C9E001E5047 /* RNSystemFileBrower.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		18BA3BE026C11CF8001E5047 /* RNSystemFileBrower.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BA3BDF26C11CF8001E5047 /* RNSystemFileBrower.m */; };
+		1867F49827116C7200FBA9E8 /* RNSystemFileBrower.h in Headers */ = {isa = PBXBuildFile; fileRef = 1867F49627116C7200FBA9E8 /* RNSystemFileBrower.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1867F49F27116CC400FBA9E8 /* RNSystemFileBrower.m in Sources */ = {isa = PBXBuildFile; fileRef = 1867F49E27116CC400FBA9E8 /* RNSystemFileBrower.m */; };
+		1867F4A127116D0D00FBA9E8 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1867F4A027116D0D00FBA9E8 /* Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		18BA3BD426C11C9E001E5047 /* RNSystemFileBrower.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RNSystemFileBrower.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		18BA3BD726C11C9E001E5047 /* RNSystemFileBrower.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RNSystemFileBrower.h; sourceTree = "<group>"; };
-		18BA3BD826C11C9E001E5047 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		18BA3BDF26C11CF8001E5047 /* RNSystemFileBrower.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNSystemFileBrower.m; sourceTree = "<group>"; };
+		1867F49327116C7200FBA9E8 /* RNSystemFileBrower.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RNSystemFileBrower.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1867F49627116C7200FBA9E8 /* RNSystemFileBrower.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RNSystemFileBrower.h; sourceTree = "<group>"; };
+		1867F49E27116CC400FBA9E8 /* RNSystemFileBrower.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNSystemFileBrower.m; sourceTree = "<group>"; };
+		1867F4A027116D0D00FBA9E8 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		18BA3BD126C11C9E001E5047 /* Frameworks */ = {
+		1867F49027116C7200FBA9E8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -29,28 +30,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		18BA3BCA26C11C9D001E5047 = {
+		1867F48927116C7200FBA9E8 = {
 			isa = PBXGroup;
 			children = (
-				18BA3BD626C11C9E001E5047 /* RNSystemFileBrower */,
-				18BA3BD526C11C9E001E5047 /* Products */,
+				1867F49527116C7200FBA9E8 /* RNSystemFileBrower */,
+				1867F49427116C7200FBA9E8 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		18BA3BD526C11C9E001E5047 /* Products */ = {
+		1867F49427116C7200FBA9E8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				18BA3BD426C11C9E001E5047 /* RNSystemFileBrower.framework */,
+				1867F49327116C7200FBA9E8 /* RNSystemFileBrower.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		18BA3BD626C11C9E001E5047 /* RNSystemFileBrower */ = {
+		1867F49527116C7200FBA9E8 /* RNSystemFileBrower */ = {
 			isa = PBXGroup;
 			children = (
-				18BA3BD726C11C9E001E5047 /* RNSystemFileBrower.h */,
-				18BA3BDF26C11CF8001E5047 /* RNSystemFileBrower.m */,
-				18BA3BD826C11C9E001E5047 /* Info.plist */,
+				1867F4A027116D0D00FBA9E8 /* Info.plist */,
+				1867F49E27116CC400FBA9E8 /* RNSystemFileBrower.m */,
+				1867F49627116C7200FBA9E8 /* RNSystemFileBrower.h */,
 			);
 			path = RNSystemFileBrower;
 			sourceTree = "<group>";
@@ -58,25 +59,25 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		18BA3BCF26C11C9E001E5047 /* Headers */ = {
+		1867F48E27116C7200FBA9E8 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18BA3BD926C11C9E001E5047 /* RNSystemFileBrower.h in Headers */,
+				1867F49827116C7200FBA9E8 /* RNSystemFileBrower.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		18BA3BD326C11C9E001E5047 /* RNSystemFileBrower */ = {
+		1867F49227116C7200FBA9E8 /* RNSystemFileBrower */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 18BA3BDC26C11C9E001E5047 /* Build configuration list for PBXNativeTarget "RNSystemFileBrower" */;
+			buildConfigurationList = 1867F49B27116C7200FBA9E8 /* Build configuration list for PBXNativeTarget "RNSystemFileBrower" */;
 			buildPhases = (
-				18BA3BCF26C11C9E001E5047 /* Headers */,
-				18BA3BD026C11C9E001E5047 /* Sources */,
-				18BA3BD126C11C9E001E5047 /* Frameworks */,
-				18BA3BD226C11C9E001E5047 /* Resources */,
+				1867F48E27116C7200FBA9E8 /* Headers */,
+				1867F48F27116C7200FBA9E8 /* Sources */,
+				1867F49027116C7200FBA9E8 /* Frameworks */,
+				1867F49127116C7200FBA9E8 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -84,23 +85,23 @@
 			);
 			name = RNSystemFileBrower;
 			productName = RNSystemFileBrower;
-			productReference = 18BA3BD426C11C9E001E5047 /* RNSystemFileBrower.framework */;
+			productReference = 1867F49327116C7200FBA9E8 /* RNSystemFileBrower.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		18BA3BCB26C11C9D001E5047 /* Project object */ = {
+		1867F48A27116C7200FBA9E8 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 1250;
 				TargetAttributes = {
-					18BA3BD326C11C9E001E5047 = {
+					1867F49227116C7200FBA9E8 = {
 						CreatedOnToolsVersion = 12.5.1;
 					};
 				};
 			};
-			buildConfigurationList = 18BA3BCE26C11C9D001E5047 /* Build configuration list for PBXProject "RNSystemFileBrower" */;
+			buildConfigurationList = 1867F48D27116C7200FBA9E8 /* Build configuration list for PBXProject "RNSystemFileBrower" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -108,39 +109,40 @@
 				en,
 				Base,
 			);
-			mainGroup = 18BA3BCA26C11C9D001E5047;
-			productRefGroup = 18BA3BD526C11C9E001E5047 /* Products */;
+			mainGroup = 1867F48927116C7200FBA9E8;
+			productRefGroup = 1867F49427116C7200FBA9E8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				18BA3BD326C11C9E001E5047 /* RNSystemFileBrower */,
+				1867F49227116C7200FBA9E8 /* RNSystemFileBrower */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		18BA3BD226C11C9E001E5047 /* Resources */ = {
+		1867F49127116C7200FBA9E8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1867F4A127116D0D00FBA9E8 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		18BA3BD026C11C9E001E5047 /* Sources */ = {
+		1867F48F27116C7200FBA9E8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18BA3BE026C11CF8001E5047 /* RNSystemFileBrower.m in Sources */,
+				1867F49F27116CC400FBA9E8 /* RNSystemFileBrower.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		18BA3BDA26C11C9E001E5047 /* Debug */ = {
+		1867F49927116C7200FBA9E8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -192,7 +194,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -202,7 +204,7 @@
 			};
 			name = Debug;
 		};
-		18BA3BDB26C11C9E001E5047 /* Release */ = {
+		1867F49A27116C7200FBA9E8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -248,7 +250,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -258,7 +260,7 @@
 			};
 			name = Release;
 		};
-		18BA3BDD26C11C9E001E5047 /* Debug */ = {
+		1867F49C27116C7200FBA9E8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -280,7 +282,7 @@
 			};
 			name = Debug;
 		};
-		18BA3BDE26C11C9E001E5047 /* Release */ = {
+		1867F49D27116C7200FBA9E8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -305,25 +307,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		18BA3BCE26C11C9D001E5047 /* Build configuration list for PBXProject "RNSystemFileBrower" */ = {
+		1867F48D27116C7200FBA9E8 /* Build configuration list for PBXProject "RNSystemFileBrower" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				18BA3BDA26C11C9E001E5047 /* Debug */,
-				18BA3BDB26C11C9E001E5047 /* Release */,
+				1867F49927116C7200FBA9E8 /* Debug */,
+				1867F49A27116C7200FBA9E8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		18BA3BDC26C11C9E001E5047 /* Build configuration list for PBXNativeTarget "RNSystemFileBrower" */ = {
+		1867F49B27116C7200FBA9E8 /* Build configuration list for PBXNativeTarget "RNSystemFileBrower" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				18BA3BDD26C11C9E001E5047 /* Debug */,
-				18BA3BDE26C11C9E001E5047 /* Release */,
+				1867F49C27116C7200FBA9E8 /* Debug */,
+				1867F49D27116C7200FBA9E8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 18BA3BCB26C11C9D001E5047 /* Project object */;
+	rootObject = 1867F48A27116C7200FBA9E8 /* Project object */;
 }
