@@ -1,7 +1,7 @@
 import { NativeModules, Linking, ActionSheetIOS, Alert, Platform } from 'react-native'
 
 interface IResult {
-    code: 404 | 200 | 500; // 404 没有找到相关地图app 200 成功  500调用出错，库有没有导进来
+    url?: string;
 }
 
 

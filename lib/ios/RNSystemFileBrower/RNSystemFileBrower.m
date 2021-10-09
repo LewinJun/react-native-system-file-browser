@@ -76,30 +76,31 @@ RCT_EXPORT_METHOD(openFileBrower:(NSDictionary*)params success:(RCTPromiseResolv
   
 }
 
-- (void)documentBrowser:(UIDocumentBrowserViewController *)controller didPickDocumentsAtURLs:(NSArray<NSURL *> *)documentURLs {
+- (void)documentBrowser:(UIDocumentBrowserViewController *)controller didPickDocumentsAtURLs:(NSArray<NSURL *> *)documentURLs  API_AVAILABLE(ios(11.0)){
   NSLog(@"didPickDocumentsAtURLs:%@", documentURLs);
   [controller dismissViewControllerAnimated:YES completion:nil];
   [self callUrl:documentURLs];
 }
 
-- (void)documentBrowser:(UIDocumentBrowserViewController *)controller didPickDocumentURLs:(NSArray<NSURL *> *)documentURLs {
+- (void)documentBrowser:(UIDocumentBrowserViewController *)controller didPickDocumentURLs:(NSArray<NSURL *> *)documentURLs  API_AVAILABLE(ios(11.0)){
   NSLog(@"didPickDocumentURLs:%@", documentURLs);
   [controller dismissViewControllerAnimated:YES completion:nil];
   [self callUrl:documentURLs];
 }
 
-- (void)documentBrowser:(UIDocumentBrowserViewController *)controller didRequestDocumentCreationWithHandler:(void (^)(NSURL * _Nullable, UIDocumentBrowserImportMode))importHandler {
+- (void)documentBrowser:(UIDocumentBrowserViewController *)controller didRequestDocumentCreationWithHandler:(void (^)(NSURL * _Nullable, UIDocumentBrowserImportMode))importHandler  API_AVAILABLE(ios(11.0)){
   NSLog(@"didRequestDocumentCreationWithHandler");
 }
 
 -(void)callUrl:(NSArray<NSURL *> *)documentURLs {
-  NSMutableArray *urls = [NSMutableArray new];
-  for(int i=0;i<documentURLs.count;i++) {
-    [urls addObject:documentURLs[i].absoluteString];
-  }
-  if (successBlock != nil && documentURLs.count > 0) {
-    successBlock(@{@"urls": urls});
-  }
+    NSMutableDictionary *result = [NSMutableDictionary new];
+    if (documentURLs != nil && documentURLs.count > 0) {
+        [result setObject:documentURLs[0].absoluteString forKey:@"url"];
+    }
+  
+    if (successBlock != nil) {
+        successBlock(result);
+    }
 }
 
 @end

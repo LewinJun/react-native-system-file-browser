@@ -19,6 +19,7 @@ import {
   TouchableOpacity,
   View,
   Image,
+  Platform,
 } from 'react-native';
 
 import RNSystemFileBrower from './native'
@@ -80,9 +81,9 @@ const App: () => Node = () => {
             backgroundColor: isDarkMode ? Colors.black : Colors.white,
           }}>
           <TouchableOpacity style={styles.btn} onPress={() => {
-            RNSystemFileBrower.openFileBrower().then(res => {
+            RNSystemFileBrower.openFileBrower({ types: Platform.OS === 'ios' ? ["com.adobe.pdf"] : ["application/pdf"] }).then(res => {
               console.log(res)
-              setImg(res?.urls[0])
+              setImg(res?.url)
             })
             // OpenMapNavigation.openMapActionSheet("121.467237", "31.234532", "上海华盛大公馆", {
             //   onFail: (e) => {

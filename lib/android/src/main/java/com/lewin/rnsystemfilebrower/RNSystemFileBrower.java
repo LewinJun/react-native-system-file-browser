@@ -19,6 +19,7 @@ import com.facebook.react.bridge.WritableMap;
 
 public class RNSystemFileBrower extends ReactContextBaseJavaModule {
 
+    private Integer FILE_REQUEST_CODE = 10101;
 
     private Promise callBack;
 
@@ -27,13 +28,17 @@ public class RNSystemFileBrower extends ReactContextBaseJavaModule {
         reactContext.addActivityEventListener(new ActivityEventListener() {
             @Override
             public void onActivityResult(Activity activity, int requestCode, int resultCode, Intent data) {
-                WritableArray writableMapList = Arguments.createArray();
-                Uri uri = data.getData();
-                writableMapList.pushString(uri.toString());
 
-                WritableMap map = Arguments.createMap();
-                map.putArray("urls", writableMapList);
-                callBack.resolve(map);
+                if (requestCode == FILE_REQUEST_CODE && callBack != null) {
+
+                    WritableMap map = Arguments.createMap();
+                    if (data != null) {
+                        Uri uri = data.getData();
+                        map.putString("url", uri.toString());
+                    }
+
+                    callBack.resolve(map);
+                }
             }
             @Override
             public void onNewIntent(Intent intent) {
@@ -56,14 +61,14 @@ public class RNSystemFileBrower extends ReactContextBaseJavaModule {
             //intent.setType(“audio/*”); //选择音频
             //intent.setType(“video/*”); //选择视频 （mp4 3gp 是android支持的视频格式）
             //intent.setType(“video/*;image/*”);//同时选择视频和图片
-            if (params.hasKey("types")) {
+            if (params != null && params.hasKey("types")) {
                 intent.setType(params.getString("types"));//无类型限制
             } else {
                 intent.setType("*/*");//无类型限制
             }
 //            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             intent.addCategory(Intent.CATEGORY_OPENABLE);
-            getCurrentActivity().startActivityForResult(intent, 1);
+            getCurrentActivity().startActivityForResult(intent, FILE_REQUEST_CODE);
 //            promise.resolve(isInstalled(this.getReactApplicationContext(), packageName));
         }catch (Exception e) {
             e.printStackTrace();
