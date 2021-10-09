@@ -5,7 +5,7 @@
 - [使用](#usage)
 
 ## Install
-### 1: yarn add 或者npm install
+### 1: yarn add 或者npm install,现在最新版本是1.1.0
 `yarn add react-native-system-file-browser  `
 ### 2: yarn install 或 npm install
 ### 3: cd ios && pod install
