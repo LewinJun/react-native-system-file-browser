@@ -1,4 +1,5 @@
-# react-native-system-file-browser
+# rreact-native-system-file-browser
+react-native 识别照片二维码
 
 ## 目录
 - [安装](#install)
@@ -6,7 +7,7 @@
 
 ## Install
 ### 1: yarn add 或者npm install,现在最新版本是1.1.0
-`yarn add react-native-system-file-browser  `
+`yarn add rreact-native-system-file-browser  `
 ### 2: yarn install 或 npm install
 ### 3: cd ios && pod install
 
@@ -114,8 +115,3 @@ PPTX = “application/vnd.openxmlformats-officedocument.presentationml.presentat
 
 */
 ```
-
-## 如下图
-![image](https://github.com/LewinJun/react-native-system-file-browser/blob/master/ios.png)
-
-![image](https://github.com/LewinJun/react-native-system-file-browser/blob/master/android.jpeg)

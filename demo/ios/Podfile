@@ -12,7 +12,7 @@ target 'Example' do
     :hermes_enabled => false
   )
   
-  pod 'LewinVCRouter'
+  # pod 'LewinVCRouter'
 
 #  pod 'react-native-open-map-navigation', :path => '../node_modules/react-native-open-map-navigation'
 

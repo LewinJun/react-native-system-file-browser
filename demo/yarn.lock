@@ -5438,8 +5438,10 @@ react-native-codegen@^0.0.6:
     jscodeshift "^0.11.0"
     nullthrows "^1.1.1"
 
-react-native-system-file-browser@../lib:
+react-native-system-file-browser@1.0.0:
   version "1.0.0"
+  resolved "http://verdaccio.doctopia.com.cn/react-native-system-file-browser/-/react-native-system-file-browser-1.0.0.tgz#8d66df7269dddb92b5932306168afffef8bb4ad6"
+  integrity sha1-jWbfcmnd25K1kyMGFor//vi7StY=
 
 react-native@0.64.2:
   version "0.64.2"
