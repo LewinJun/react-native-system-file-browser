@@ -95,11 +95,28 @@ RCT_EXPORT_METHOD(openFileBrower:(NSDictionary*)params success:(RCTPromiseResolv
 -(void)callUrl:(NSArray<NSURL *> *)documentURLs {
     NSMutableDictionary *result = [NSMutableDictionary new];
     if (documentURLs != nil && documentURLs.count > 0) {
-        [result setObject:documentURLs[0].absoluteString forKey:@"url"];
-    }
-  
-    if (successBlock != nil) {
-        successBlock(result);
+//        [result setObject:documentURLs[0].absoluteString forKey:@"url"];
+        BOOL fileUrlAuthozied = [documentURLs.firstObject startAccessingSecurityScopedResource];
+        if (fileUrlAuthozied) {
+            NSFileCoordinator *fileCoordinator = [[NSFileCoordinator alloc] init];
+            [fileCoordinator coordinateReadingItemAtURL:documentURLs[0] options:0 error:nil byAccessor:^(NSURL * _Nonnull newURL) {
+                NSData *fileData = [NSData dataWithContentsOfURL:newURL options:NSDataReadingMappedIfSafe error:nil];
+                [result setObject:fileData forKey:@"data"];
+                [result setObject:newURL.absoluteString forKey:@"url"];
+                if (successBlock != nil) {
+                    successBlock(result);
+                }
+            }];
+            [documentURLs.firstObject stopAccessingSecurityScopedResource];
+        } else {
+            if (successBlock != nil) {
+                successBlock(result);
+            }
+        }
+    } else {
+        if (successBlock != nil) {
+            successBlock(result);
+        }
     }
 }
 

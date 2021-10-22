@@ -2,6 +2,7 @@ import { NativeModules, Linking, ActionSheetIOS, Alert, Platform } from 'react-n
 
 interface IResult {
     url?: string;
+    data?: any;
 }
 
 
