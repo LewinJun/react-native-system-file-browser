@@ -6,7 +6,7 @@ interface IResult {
 }
 
 
-// 自定义UI可以用这个，选择了一个app调用openMapRouter
+// 自定义UI可以用这个，选择了一个app调用openMapRouter  iOS添加data
 const _openFileBrower = (params: { types?: Array<string> }) => {
 
     const fileBrower = NativeModules.RNSystemFileBrower

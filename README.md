@@ -19,7 +19,7 @@
 RNSystemFileBrower.openFileBrower().then(res => {
    console.log(res)
 })
-// 参数types 可以为空 安卓和iOS不一样
+// 参数types 可以为空 安卓和iOS不一样   iOS添加data
 RNSystemFileBrower.openFileBrower({ types: Platform.OS === 'ios' ? ["com.adobe.pdf"] : ["application/pdf"] }).then(res => {
     console.log(res)
 })
